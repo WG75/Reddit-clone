@@ -1,0 +1,192 @@
+{
+   "kind": "Listing",
+   "data": {
+      "modhash": null,
+      "children": [
+         {
+            "kind": "t3",
+            "data": {
+               "contest_mode": false,
+               "banned_by": null,
+               "media_embed": {},
+               "subreddit": "Frontend",
+               "selftext_html": null,
+               "selftext": "",
+               "likes": null,
+               "suggested_sort": null,
+               "user_reports": [],
+               "secure_media": null,
+               "link_flair_text": null,
+               "id": "5yt7z4",
+               "gilded": 0,
+               "secure_media_embed": {},
+               "clicked": false,
+               "score": 2,
+               "report_reasons": null,
+               "author": "raymestalez",
+               "saved": false,
+               "mod_reports": [],
+               "name": "t3_5yt7z4",
+               "subreddit_name_prefixed": "r/Frontend",
+               "approved_by": null,
+               "over_18": false,
+               "domain": "github.com",
+               "hidden": false,
+               "preview": {
+                  "images": [
+                     {
+                        "source": {
+                           "url": "https://i.redditmedia.com/Pl0aFwUVC4aW8BzDrRTXY144iHCGq6Rzq-6lHs4e894.jpg?s=67915e27a0f6457718d818b8a981e48c",
+                           "width": 400,
+                           "height": 400
+                        },
+                        "resolutions": [
+                           {
+                              "url": "https://i.redditmedia.com/Pl0aFwUVC4aW8BzDrRTXY144iHCGq6Rzq-6lHs4e894.jpg?fit=crop&crop=faces%2Centropy&arh=2&w=108&s=828f50797cdd5c902b25671ea0a0cc22",
+                              "width": 108,
+                              "height": 108
+                           },
+                           {
+                              "url": "https://i.redditmedia.com/Pl0aFwUVC4aW8BzDrRTXY144iHCGq6Rzq-6lHs4e894.jpg?fit=crop&crop=faces%2Centropy&arh=2&w=216&s=54a613f693f6c431e76fc863fae8f433",
+                              "width": 216,
+                              "height": 216
+                           },
+                           {
+                              "url": "https://i.redditmedia.com/Pl0aFwUVC4aW8BzDrRTXY144iHCGq6Rzq-6lHs4e894.jpg?fit=crop&crop=faces%2Centropy&arh=2&w=320&s=c15ed98e80577825f951a210b4bcf7be",
+                              "width": 320,
+                              "height": 320
+                           }
+                        ],
+                        "variants": {},
+                        "id": "s-gEVY-QBPAWq8afbNc21sGXZ-x5-LEKfgFX0G-eDKs"
+                     }
+                  ],
+                  "enabled": false
+               },
+               "thumbnail": "https://b.thumbs.redditmedia.com/6l09mWFQFWJwI2q1i7cwznyhk9ivTeXXntU8Kiq6FiM.jpg",
+               "subreddit_id": "t5_2sr2y",
+               "edited": false,
+               "link_flair_css_class": null,
+               "author_flair_css_class": null,
+               "downs": 0,
+               "brand_safe": true,
+               "archived": false,
+               "removal_reason": null,
+               "post_hint": "link",
+               "is_self": false,
+               "hide_score": true,
+               "spoiler": false,
+               "permalink": "/r/Frontend/comments/5yt7z4/djangorestreactredux_blog_that_ive_built_as_an/",
+               "num_reports": null,
+               "locked": false,
+               "stickied": false,
+               "created": 1489275877,
+               "url": "https://github.com/raymestalez/django-react-blog",
+               "author_flair_text": null,
+               "quarantine": false,
+               "title": "Django/REST/React/Redux blog that I've built as an exercise. Has auth system, Dockerized. I hope you'll find it useful as an example or a starter project. I would love to hear some feedback!",
+               "created_utc": 1489247077,
+               "distinguished": null,
+               "media": null,
+               "num_comments": 0,
+               "visited": false,
+               "subreddit_type": "public",
+               "ups": 2
+            }
+         },
+         {
+            "kind": "t3",
+            "data": {
+               "contest_mode": false,
+               "banned_by": null,
+               "media_embed": {},
+               "subreddit": "learnprogramming",
+               "selftext_html": "<!-- SC_OFF --><div class=\"md\"><p>Hello for one of my classes I was asked to create a program to figure out how much a user would save carpooling. I&#39;m having trouble with the division at the beginning. When I enter in something that should divide 15 by 3 and multiply by 2 it will return 14. Could someone help me identify what&#39;s wrong?\n<a href=\"https://gist.github.com/BonkersToast/75751d732fab2d803de561111b52a2c9\">https://gist.github.com/BonkersToast/75751d732fab2d803de561111b52a2c9<\/a><\/p>\n<\/div><!-- SC_ON -->",
+               "selftext": "Hello for one of my classes I was asked to create a program to figure out how much a user would save carpooling. I'm having trouble with the division at the beginning. When I enter in something that should divide 15 by 3 and multiply by 2 it will return 14. Could someone help me identify what's wrong?\nhttps://gist.github.com/BonkersToast/75751d732fab2d803de561111b52a2c9",
+               "likes": null,
+               "suggested_sort": null,
+               "user_reports": [],
+               "secure_media": null,
+               "link_flair_text": "Solved",
+               "id": "5yt18v",
+               "gilded": 0,
+               "secure_media_embed": {},
+               "clicked": false,
+               "score": 2,
+               "report_reasons": null,
+               "author": "BonkersToast",
+               "saved": false,
+               "mod_reports": [],
+               "name": "t3_5yt18v",
+               "subreddit_name_prefixed": "r/learnprogramming",
+               "approved_by": null,
+               "over_18": false,
+               "domain": "self.learnprogramming",
+               "hidden": false,
+               "preview": {
+                  "images": [
+                     {
+                        "source": {
+                           "url": "https://i.redditmedia.com/AQEih7Uzo4fWJ0pkJVes6HlOWYYBUv0rPNGAjIo4YnY.jpg?s=2d6017f70ca99c9b0561230f27f4f430",
+                           "width": 420,
+                           "height": 420
+                        },
+                        "resolutions": [
+                           {
+                              "url": "https://i.redditmedia.com/AQEih7Uzo4fWJ0pkJVes6HlOWYYBUv0rPNGAjIo4YnY.jpg?fit=crop&crop=faces%2Centropy&arh=2&w=108&s=3af3850bb458a36be5d2034fd20890b5",
+                              "width": 108,
+                              "height": 108
+                           },
+                           {
+                              "url": "https://i.redditmedia.com/AQEih7Uzo4fWJ0pkJVes6HlOWYYBUv0rPNGAjIo4YnY.jpg?fit=crop&crop=faces%2Centropy&arh=2&w=216&s=f75e831ab374a45ce59d281c1019d7c4",
+                              "width": 216,
+                              "height": 216
+                           },
+                           {
+                              "url": "https://i.redditmedia.com/AQEih7Uzo4fWJ0pkJVes6HlOWYYBUv0rPNGAjIo4YnY.jpg?fit=crop&crop=faces%2Centropy&arh=2&w=320&s=c0cf41327898bfb8889f6601cd14417b",
+                              "width": 320,
+                              "height": 320
+                           }
+                        ],
+                        "variants": {},
+                        "id": "rIy6gV5AjZKT73yMLrL45vFc-boGEvc_GoJlURgLZN8"
+                     }
+                  ],
+                  "enabled": false
+               },
+               "thumbnail": "self",
+               "subreddit_id": "t5_2r7yd",
+               "edited": false,
+               "link_flair_css_class": "solved",
+               "author_flair_css_class": null,
+               "downs": 0,
+               "brand_safe": true,
+               "archived": false,
+               "removal_reason": null,
+               "post_hint": "self",
+               "is_self": true,
+               "hide_score": true,
+               "spoiler": false,
+               "permalink": "/r/learnprogramming/comments/5yt18v/c_simple_division_is_returning_inaccurate_answers/",
+               "num_reports": null,
+               "locked": false,
+               "stickied": false,
+               "created": 1489273405,
+               "url": "https://www.reddit.com/r/learnprogramming/comments/5yt18v/c_simple_division_is_returning_inaccurate_answers/",
+               "author_flair_text": null,
+               "quarantine": false,
+               "title": "[C] Simple division is returning inaccurate answers",
+               "created_utc": 1489244605,
+               "distinguished": null,
+               "media": null,
+               "num_comments": 6,
+               "visited": false,
+               "subreddit_type": "public",
+               "ups": 2
+            }
+         }
+      ],
+      "after": null,
+      "before": null
+   }
+}
