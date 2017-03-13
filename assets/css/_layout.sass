@@ -1,0 +1,82 @@
+header
+  height: 67px
+  background: $navbgcolor
+  line-height: 18px
+
+.flex
+  display: flex
+
+.top-header
+  background-color: #f0f0f0
+  height: 18px
+  border-bottom: 1px solid #777
+
+.selected
+  color: $activecolor
+  font-weight: 700
+
+
+.dropdown
+  align-self: flex-start
+  flex-shrink: 0
+  margin-left: 5px
+  margin-right: 15px
+  padding-right: 15px
+  text-transform: uppercase
+  font-size: 0.9em
+  a
+    display: block
+    color: #000
+
+
+.dropdown-menu
+  display: none
+
+
+.sublinks
+  flex-shrink: 1
+  overflow: hidden
+  align-self: center
+  font-size: 0.9em
+  .mysubs
+    a
+      color: #000
+      &:hover
+        text-decoration: underline
+    .selected
+      color: $activecolor
+      font-weight: 700
+
+    &::after
+      content: "-"
+      display: inline-block
+      width: 10px
+      height: 10px
+      text-align: center
+
+span
+  flex-shrink: 0
+  margin: 0 10px 0
+  a
+    font-weight: 700
+    color: #000
+    &:hover
+      text-decoration: underline
+
+
+
+.main-header
+
+
+.main-nav
+  ul
+
+
+.user-actions
+  align-self: flex-end
+
+.slide-nav
+  display: none
+
+button
+  display: none
