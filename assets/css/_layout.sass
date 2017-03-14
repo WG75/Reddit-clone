@@ -1,82 +1,118 @@
-header
-  height: 67px
+.main-header
+  min-height: 67px
   background: $navbgcolor
   line-height: 18px
+  flex-direction: column
+  border-bottom: 1px solid #5f99cf
+  .selected
+    color: $activecolor
+    font-weight: 700
 
-.flex
+.flex-container
   display: flex
 
 .top-header
   background-color: #f0f0f0
-  height: 18px
+  min-height: 18px
   border-bottom: 1px solid #777
-
-.selected
-  color: $activecolor
-  font-weight: 700
-
-
-.dropdown
-  align-self: flex-start
-  flex-shrink: 0
-  margin-left: 5px
-  margin-right: 15px
-  padding-right: 15px
-  text-transform: uppercase
   font-size: 0.9em
   a
-    display: block
     color: #000
+    &:hover
+      text-decoration: underline
 
+.dropdown
+  margin-left: 5px
+  margin-right: 10px
+  padding-right: 20px
+  text-transform: uppercase
+  flex: 1 0 auto
+  background-image: url('../../assets/img/droparrowgray.gif')
+  background-repeat: no-repeat
+  background-position: right
+  a
+    display: block
+    &:hover
+      text-decoration: none
 
 .dropdown-menu
   display: none
 
-
 .sublinks
-  flex-shrink: 1
   overflow: hidden
-  align-self: center
-  font-size: 0.9em
   .mysubs
-    a
-      color: #000
-      &:hover
-        text-decoration: underline
-    .selected
-      color: $activecolor
-      font-weight: 700
-
     &::after
       content: "-"
       display: inline-block
       width: 10px
       height: 10px
       text-align: center
+  .pipe::after
+    content: "|"
 
-span
-  flex-shrink: 0
-  margin: 0 10px 0
+.editsub
+  margin: 0 15px 0
+  flex: 1 0 auto
   a
     font-weight: 700
-    color: #000
-    &:hover
-      text-decoration: underline
 
+.secondary-header
+  flex: 1
+  justify-content: space-between
 
-
-.main-header
-
+.nav-wrapper
+  flex: 0 0 570px
+  .logo
+    flex: 0 0 120px
+    background: url('../../assets/img/icons.png')
+    background-repeat: no-repeat
+    background-position: 0px -1320px
+    margin-right: 10px
 
 .main-nav
-  ul
+  align-self: flex-end
+  font-weight: 700
+  font-size: 1.2em
+  line-height: 1
 
+.nav-item
+  margin-right: 5px
+  background: #eff7ff
+
+.nav-link
+  display: block
+  padding: 3px 7px 0
+  color: $linkscolor
+
+.tabbed
+  border: 1px inset #eff7ff
+  margin-bottom: -1px
 
 .user-actions
   align-self: flex-end
+  background: #eff7ff
+  padding: 2px 5px
+  border-radius: 8px 0 0 0
+  li:not(:last-child)::after
+    content: "|"
+    display: inline-block
+    width: 10px
+    text-align: center
+    color: gray
+  a
+    color: #369
+  span
+    color: gray
+  .num-messages
+    font-weight: bold
 
-.slide-nav
-  display: none
+.preferences
+  font-weight: 700
 
-button
-  display: none
+.messages
+  display: inline-block
+  width: 15px
+  height: 15px
+  vertical-align: middle
+  background-image: url('../../assets/img/icons.png')
+  background-position: -42px -1659px
