@@ -3,7 +3,7 @@
   background: $navbgcolor
   line-height: 18px
   flex-direction: column
-  border-bottom: 1px solid #5f99cf
+  border-bottom: 1px solid #000
   .selected
     color: $activecolor
     font-weight: 700
@@ -58,22 +58,28 @@
 
 .secondary-header
   flex: 1
-  justify-content: space-between
-
-.nav-wrapper
-  flex: 0 0 570px
+  flex-flow: row wrap
+  @media screen and (max-width: 800px)
+    flex-direction: column
+    align-items: center
   .logo
-    flex: 0 0 120px
+    width: 120px
     background: url('../../assets/img/icons.png')
     background-repeat: no-repeat
     background-position: 0px -1320px
     margin-right: 10px
+    height: 47px
 
 .main-nav
   align-self: flex-end
   font-weight: 700
   font-size: 1.2em
   line-height: 1
+  margin-right: auto
+  @media screen and (max-width: 800px)
+    order: 2
+    align-self: center
+    margin-right: 0
 
 .nav-item
   margin-right: 5px
@@ -93,6 +99,10 @@
   background: #eff7ff
   padding: 2px 5px
   border-radius: 8px 0 0 0
+  @media screen and (max-width: 800px)
+    align-self: center
+    margin: 8px 0
+    border-radius: 8px
   li:not(:last-child)::after
     content: "|"
     display: inline-block
