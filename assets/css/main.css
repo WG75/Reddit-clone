@@ -21,6 +21,9 @@ span {
   margin: 0;
   display: inline-block; }
 
+::-webkit-search-cancel-button {
+  display: none; }
+
 /*** Styling the H*E*A*D*E*R ** */
 .main-header {
   min-height: 67px;
@@ -184,9 +187,6 @@ form {
     background-position: -90px -1639px;
     background-repeat: no-repeat; }
 
-::-webkit-search-cancel-button {
-  display: none; }
-
 .actions {
   font-weight: 700;
   font-size: 1.4em;
@@ -226,7 +226,7 @@ form {
 
 .create-sub {
   color: gray;
-  padding: 10px 10px 25px 0px; }
+  padding: 5px 10px 25px 0px; }
   .create-sub a {
     display: inline-block;
     float: left;
@@ -251,14 +251,14 @@ form {
   font-size: 1.25em;
   color: rgba(0, 0, 0, 0.8);
   text-align: left;
-  border: 1px solid #554a2a;
+  border: 1px solid #907c47;
   border-radius: 5px; }
   .reddit-gold::after {
     content: "";
     position: absolute;
     display: inline-block;
     border: 10px solid;
-    border-color: transparent transparent #fff transparent;
+    border-color: transparent transparent #907c47 transparent;
     top: -20px;
     left: calc(50% - 10px); }
   .reddit-gold p {
@@ -285,14 +285,17 @@ form {
     padding-bottom: 10px; }
   .reddit-gold .bold-link {
     font-weight: 700;
-    color: #554a2a; }
+    color: #825b25; }
     .reddit-gold .bold-link:hover {
       text-decoration: underline; }
   .reddit-gold .yesterday-goal {
-    border-top: 1px solid #000;
-    padding: 5px; }
+    border-top: 1px solid #ccc;
+    padding: 0px 5px 5px; }
     .reddit-gold .yesterday-goal .bar {
-      height: 12px; }
+      height: 12px;
+      margin-left: 0; }
+      .reddit-gold .yesterday-goal .bar .progress {
+        width: 98%; }
       .reddit-gold .yesterday-goal .bar .met {
         font-size: 0.8em;
         font-weight: 300;
@@ -300,44 +303,46 @@ form {
         margin-right: -30px; }
 
 .donation {
-  border: 3px double #f3e287;
-  padding: 10px;
+  border: 3px double #dbd1b5;
   text-align: center;
   position: relative; }
-  .donation h3 {
+  .donation > p {
     color: #554a2a;
     font-size: 1.2em;
-    font-family: verdana; }
+    font-family: verdana;
+    margin: 7px 0; }
   .donation .bar {
-    width: 250px;
-    height: 25px;
-    border: 1px solid #f3e287;
+    width: 240px;
+    height: 20px;
+    border: 1px solid #dbd1b5;
     background: #fff;
     border-radius: 25px;
     text-align: left;
-    display: block; }
+    display: block;
+    margin-left: 10px; }
     .donation .bar .progress {
       width: 61%;
       height: 100%;
       border-radius: 25px;
       line-height: 33px;
-      background-color: #f3e287; }
+      background-image: linear-gradient(to bottom, #fff8ba 0%, #eccf90 100%); }
     .donation .bar .met {
       vertical-align: top;
-      line-height: 25px;
+      line-height: 20px;
       float: right;
       margin-right: -40px;
       font-weight: bold;
-      font-size: 1.7em;
+      font-size: 1.5em;
       color: #554a2a;
       font-family: verdana; }
   .donation .support-reddit {
-    display: inline-block;
-    padding: 5px 10px;
-    margin-top: 15px;
+    display: block;
+    width: 85px;
+    margin: 10px auto;
+    padding: 2px;
     color: #554a2a;
-    border: 1px solid #554a2a;
-    background: #dbd1b5; }
+    font-family: verdana;
+    box-shadow: 0px 1px 1px 2px #dbd1b5; }
 
 /*M*A*I*N*P*O*S*T*S/ */
 
