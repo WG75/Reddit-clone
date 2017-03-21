@@ -136,7 +136,7 @@ main
 aside
   flex: 0 0 310px
   margin-left: auto
-  padding: 7px 0
+  padding: 7px 5px
 
 form
   font-size: 0
@@ -146,14 +146,13 @@ form
     background-color: $barcolor
     border: 1px solid $activecolor
     padding: 12px
-    width: 99%
     border-radius: 2px
     margin: 5px 0
   input[type="search"]
-    width: 99%
     padding: 6px
     border: 1px solid #000
     font-family: verdana
+    width: 100%
   input[type="submit"]
     margin: 0 0 5px -22px
     width: 13px
@@ -170,24 +169,33 @@ form
 
 .actions
   font-weight: 700
-  font-size: 1.3em
+  font-size: 1.4em
   text-align: center
   .action
     position: relative
-    margin: 5px 0
-    line-height: 35px
+    margin: 12px 0
+    padding: 6px
     background: url('../../assets/img/icons.png')
     background-position: 0px -278px
     background-repeat: repeat
-    border: 1px solid #c4dbf1
+    border: 1px solid  #c4dbf1
+    border-right: 0
+    width: calc(100% - 24px)
+    &:hover
+      background-position: 0px -244px
+      border-color: #8cb2d6
+      &::after
+        background-position: -33px -1370px
+      a
+        color: #fff
     &::after
       content: ""
       position: absolute
-      top: 0
-      right: 0
+      top: -1px
+      right: -24px
       display: inline-block
       width: 24px
-      height: 35px
+      height: calc(100% + 2px)
       background: url('../../assets/img/icons.png')
       background-position: -61px -1369px
       background-repeat: no-repeat
@@ -195,7 +203,6 @@ form
     a
       color: $linkscolor
       display: block
-
 .create-sub
   color: gray
   padding: 10px 10px 25px 0px
@@ -312,3 +319,6 @@ form
     color: $adtextcolor
     border: 1px solid $adtextcolor
     background: $bordercolor
+
+
+/*M*A*I*N*P*O*S*T*S/
