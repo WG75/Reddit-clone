@@ -7,9 +7,10 @@
 
   function excuteCode(){
 
-    var reddit = {
-      url: 'hot',
-      
+    var app = {
+      // fetch: reddit()
+      // url: 'hot',
+
     }
 
 
