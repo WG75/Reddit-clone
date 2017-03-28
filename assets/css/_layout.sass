@@ -43,6 +43,7 @@
 .sublinks
   overflow: hidden
   .mysubs
+    flex-shrink: 0
     &::after
       content: "-"
       display: inline-block
@@ -215,7 +216,7 @@ form
     background-position: -76px -1043px
 
 .is-hidden
-  display: block
+  display: none
 
 .reddit-gold
   position: absolute
@@ -321,3 +322,88 @@ form
     box-shadow: 0px 1px 1px 2px #dbd1b5
 
 /*M*A*I*N*P*O*S*T*S/
+
+.posts
+  margin-top: 15px
+  padding: 20px
+  color: #888
+  .post
+    display: flex
+    .order
+      font-size: 1.7em
+      align-self: center
+      margin-top: -20px
+      margin-right: 15px
+    .vote
+      display: flex
+      flex-direction: column
+      align-items: center
+      button
+        background: url("../../assets/img/icons.png")
+        padding: 10px
+      .up
+        background-position: -80px -1618px
+      .down
+        background-position: -38px -1615px
+      .score
+        font-size: 1.2em
+        font-weight: 700
+
+.thumb-container
+  flex: 0 0 70px
+  a
+    height: 50px
+    width: 100%
+    background: url("../../assets/img/icons.png")
+    background-position: 1px -1267px
+.title
+  font-size: 1.6em
+  margin-right: aut
+  + a
+    color: #888
+
+.post-wrapper
+  position: relative
+  p
+    display: flex
+  .post-content
+    position: absolute
+    top: 100%
+    padding: 10px
+    color: #000
+    font-size: 1.4em
+    line-height: 1.4
+    border-radius: 5px
+    border: 1px solid #369
+    display: block
+
+
+.post-details
+  margin-bottom: 10px
+  > p
+    time,
+    a
+      margin: 0 3px
+    a
+      color: #369
+
+  .post-actions
+    display: flex
+    flex: 0 0 100%
+    margin-top: 3px
+    li
+      margin-right: 5px
+      a
+        color: #888
+        font-weight: 700
+        font-size: 1.1em
+  .expand
+    float: left
+    margin-right: 5px
+    width: 23px
+    height: 23px
+    background: url('../../assets/img/sprite-expando.2qrMoUHZue8.png')
+    background-repeat: no-repeat
+    background-position: 0 -457px
+    &:hover
+      background-position: 0 -428px

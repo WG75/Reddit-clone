@@ -89,34 +89,52 @@
 
     <div class="posts">
 
-      <div class="post hidden">
+      <div class="post">
         <span class="order">1</span>
 
         <div class="vote">
-          <button class="up">up</button>
+          <button class="up"></button>
           <span class="score">125</span>
-          <button class="down">down</button>
+          <button class="down"></button>
         </div>
 
-        <div class="thumb">
-          <img src="" alt="thumbnail">
+        <div class="thumb-container">
+          <a class="thumb" href="#"></a>
         </div>
+
 
         <div class="post-wrapper">
-          <a href="#" class="title">Flexbox Froggy. A cool site with interactive exercises that help with CSS coding</a>
-          <span class="domin">self.learnprogramming</span>
-        </div>
+          <p>
+            <a href="#" class="title">Flexbox Froggy. A cool site with interactive exercises that help with CSS coding</a>
+            <a href="#" class="domin">(self.learnprogramming)</a>
+          </p>
 
         <div class="post-details">
-          <button class="expand">expand</button>
+          <button class="expand"></button>
           <p>submitted
             <time>1489218235</time>
             by <a class="author" href="#">shooter33</a>
             to <a class="sub" href="#">r/Frontend</a>
           </p>
+          <ul class="post-actions">
+            <li>
+              <a href="#">
+                <span class="comment-num">20</span>
+                comments
+              </a>
+            </li>
+            <li><a href="#">share</a></li>
+            <li><a href="#">save</a></li>
+            <li><a href="#">hide</a></li>
+            <li><a href="#">report</a></li>
+          </ul>
+
+        </div>
+          <div class="post-content is-hidden">Flexbox Froggy. A cool site with interactive exercises that help with
+             CSS codingFlexbox Froggy. A cool site with interactive exercises that help with CSS codingFlexbox Froggy.
+             A cool site with interactive exercises that help with CSS coding</div>
         </div>
 
-        <div class="post-content"></div>
       </div> <!-- end of post-->
 
     </div><!-- end of posts-->
@@ -188,8 +206,7 @@
 
 
   </main>
-
-
+<script src="http://localhost:35729/livereload.js"></script>
 <script src="assets/js/script.js"></script>
 </body>
 

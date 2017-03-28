@@ -11,6 +11,7 @@ body
 
 a
   text-decoration: none
+  display: inline-block
 
 ul
   list-style: none
@@ -21,5 +22,15 @@ span
   margin: 0
   display: inline-block
 
+img
+  max-width: 100%
 ::-webkit-search-cancel-button
   display: none
+
+button
+  background: transparent
+  border: none
+  &:focus
+    outline: none
+  &:hover
+    cursor: pointer
