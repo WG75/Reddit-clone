@@ -21,10 +21,6 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   });
 
-  reddit('/new').get().then(function(data) {
-
-  });
-
 })
 
 

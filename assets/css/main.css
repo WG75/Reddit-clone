@@ -253,7 +253,7 @@ form {
     background-position: -76px -1043px; }
 
 .is-hidden {
-  display: none; }
+  display: none !important; }
 
 .reddit-gold {
   position: absolute;
@@ -363,6 +363,8 @@ form {
   margin-top: 15px;
   padding: 20px;
   color: #888; }
+  .posts .post-template {
+    display: none !important; }
   .posts .post {
     display: flex; }
     .posts .post .order {
