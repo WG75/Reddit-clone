@@ -364,9 +364,11 @@ form {
   padding: 20px;
   color: #888; }
   .posts .post-template {
-    display: none !important; }
+    display: none; }
   .posts .post {
-    display: flex; }
+    display: flex;
+    margin-bottom: 5px;
+    padding: 5px; }
     .posts .post .order {
       font-size: 1.7em;
       align-self: center;

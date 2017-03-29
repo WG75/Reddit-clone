@@ -77,9 +77,11 @@
         newPost.querySelector('.order').textContent = order;
         newPost.querySelector('.score').textContent = score;
         newPost.querySelector('.title').textContent = title;
+        newPost.querySelector('.title').href = post.data.url
         newPost.querySelector('.domain').textContent = domain;
         newPost.querySelector('.author').textContent = author;
         newPost.querySelector('.sub').textContent = sub;
+        newPost.querySelector('time').textContent = time;
         newPost.querySelector('.comment-num').textContent = comments_num;
 
         app.posts_container.append(newPost);
@@ -88,10 +90,9 @@
 
 
 
-    document.querySelector('.posts').remove();
 
-    document.querySelector('main').append(app.posts_container);
-    document.querySelector('main').insertBefore(document.querySelector('aside') , app.posts_container);
+    document.querySelector('main').replaceChild(app.posts_container, document.querySelector('.posts'));
+    // document.querySelector('main').insertBefore(document.querySelector('aside') , app.posts_container);
 
 
 
