@@ -109,14 +109,27 @@
         newPost.removeAttribute('id' , 'post-template');
 
         newPost.querySelector('.order').textContent = order;
-        newPost.querySelector('.score').textContent = score;
         newPost.querySelector('.title').textContent = title;
         newPost.querySelector('.title').href = post.data.url
         newPost.querySelector('.domain').textContent = domain;
         newPost.querySelector('.author').textContent = author;
         newPost.querySelector('.sub').textContent = sub;
         newPost.querySelector('time').textContent = time;
-        newPost.querySelector('.comment-num').textContent = comments_num;
+
+
+
+        if(comments_num > 0){
+          newPost.querySelector('.comment-num').textContent = comments_num;
+        }else{
+          newPost.querySelector('.comment-num').textContent = "";
+        }
+
+        if(score < 2){
+          newPost.querySelector('.score').textContent = "";
+          newPost.querySelector('.score').classList.add('zero');
+        }else{
+          newPost.querySelector('.score').textContent = score;
+        }
 
         if(thumb != 'self'){
 
@@ -142,14 +155,14 @@
           break;
 
           case 'video':
-          newPost.querySelector('.post-content').textContent = post.data.media;
+          newPost.querySelector('.post-content').innerHTML = "<img src=" + post.data.media.oembed.thumbnail_url + ">";
+          newPost.querySelector('.post-content').style.border = "none";
           newPost.querySelector('.expand').classList.add('video');
           break;
 
           case null:
           newPost.querySelector('.post-content').remove();
           newPost.querySelector('.expand').remove();
-          break;
         }
 
         clone.append(newPost);
@@ -187,16 +200,21 @@ nav.addEventListener('click', function(e){
 })
 
 
+
+postsHolder.addEventListener('click', function(e){
+  var target = e.target;
+
+  if(target.classList.contains('expand')){
+    target.parentNode.nextElementSibling.classList.toggle('is-collapsed');
+  }
+  
+})
+
+
 //intial load
 app.fetch(app.url);
 
-
-
-
-
-
-
-  }
+}
 
 
 

@@ -449,6 +449,8 @@ form {
     border-radius: 5px;
     border: 1px solid #369;
     display: block; }
+  .post-wrapper .is-collapsed {
+    display: none; }
 
 .post-details {
   margin-bottom: 10px; }
@@ -481,5 +483,7 @@ form {
     background-position: 0 -399px; }
     .post-details .video:hover {
       background-position: 0 -370px; }
+  .post-details .close {
+    background-position: 0 -312px; }
 
 /*# sourceMappingURL=main.css.map */
