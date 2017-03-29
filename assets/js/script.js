@@ -7,13 +7,16 @@
 
   function excuteCode(){
 
+    var postsHolder = document.querySelector('.posts-container');
+    var nav = document.querySelector('.main-nav');
+    var currentPostsContainer;
+
+
     var app = {
-      url: 'new',
-      template: document.querySelector('.post-template').cloneNode(true),
+      url: 'hot',
+      template: document.querySelector('#post-template').cloneNode(true),
       posts_container: document.querySelector('.posts').cloneNode(true)
     }
-
-
 
 //pull data from the reddit api then loops over
 //the returned data (posts) and pass to app.buildPost function.
@@ -24,10 +27,11 @@
         for(var i = 0; i < posts.length; i++){
           app.buildPosts(posts[i], i);
         }
+
+        currentPostsContainer = document.querySelector('.posts');
+        postsHolder.replaceChild(app.posts_container, currentPostsContainer);
       });
     }
-
-    app.fetch(app.url);
 
     app.buildPosts = function(post, num){
       var order = num + 1;
@@ -72,7 +76,7 @@
 
         var newPost = app.template.cloneNode(true);
 
-        newPost.classList.remove('post-template');
+        newPost.removeAttribute('id' , 'post-template');
 
         newPost.querySelector('.order').textContent = order;
         newPost.querySelector('.score').textContent = score;
@@ -91,10 +95,34 @@
 
 
 
-    document.querySelector('main').replaceChild(app.posts_container, document.querySelector('.posts'));
-    // document.querySelector('main').insertBefore(document.querySelector('aside') , app.posts_container);
+    //
+    // app.isLoading = function spinner(isloading){
+    //
+    //   if(isloading){
+    //
+    //   }
+    // }
 
 
+//attach events to the UI ELements
+
+nav.addEventListener('click', function(e){
+  var target = e.target;
+
+  if(target.nodeName === 'A'){
+    e.preventDefault();
+    var href = target.getAttribute('href')
+    app.url = href.replace('#', "");
+    app.fetch(app.url);
+
+    nav.querySelector('.tabbed').classList.remove('tabbed');
+    target.classList.add('tabbed');
+  }
+})
+
+
+//intial load
+app.fetch(app.url);
 
 
 

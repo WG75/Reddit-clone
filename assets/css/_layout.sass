@@ -96,6 +96,8 @@
 .tabbed
   border: 1px inset #eff7ff
   margin-bottom: -1px
+  color: $activecolor
+  font-weight: 700
 
 .user-actions
   align-self: flex-end
@@ -323,11 +325,19 @@ form
 
 /*M*A*I*N*P*O*S*T*S/
 
+.posts-container
+  display: flex
+  flex-direction: column
+  flex: 1
+  justify-content: center
+  .spinner
+    align-self: center
+    
 .posts
   margin-top: 15px
   padding: 20px
   color: #888
-  .post-template
+  #post-template
     display: none
   .post
     display: flex

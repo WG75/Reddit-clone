@@ -134,7 +134,9 @@ button {
 
 .tabbed {
   border: 1px inset #eff7ff;
-  margin-bottom: -1px; }
+  margin-bottom: -1px;
+  color: #ff4500;
+  font-weight: 700; }
 
 .user-actions {
   align-self: flex-end;
@@ -359,11 +361,19 @@ form {
     box-shadow: 0px 1px 1px 2px #dbd1b5; }
 
 /*M*A*I*N*P*O*S*T*S/ */
+.posts-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: center; }
+  .posts-container .spinner {
+    align-self: center; }
+
 .posts {
   margin-top: 15px;
   padding: 20px;
   color: #888; }
-  .posts .post-template {
+  .posts #post-template {
     display: none; }
   .posts .post {
     display: flex;
