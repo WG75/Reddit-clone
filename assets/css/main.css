@@ -382,7 +382,6 @@ form {
     transform: rotate(360deg); } }
 .posts {
   margin-top: 15px;
-  padding: 20px;
   color: #888;
   display: flex;
   flex-direction: column; }
@@ -396,13 +395,17 @@ form {
     padding: 5px; }
     .posts .post .order {
       font-size: 1.7em;
-      align-self: center;
-      margin-top: -20px;
-      margin-right: 15px; }
+      margin-top: 17px;
+      margin-right: 10px;
+      flex: 0 0 25px;
+      text-align: right;
+      color: #c6c6c6; }
     .posts .post .vote {
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      flex: 0 0 30px;
+      color: #c6c6c6; }
       .posts .post .vote button {
         background: url("../../assets/img/icons.png");
         padding: 10px; }
@@ -420,7 +423,8 @@ form {
         background: #c3c3c3; }
 
 .thumb-container {
-  flex: 0 0 70px; }
+  flex: 0 0 70px;
+  margin: 0 5px 0 10px; }
   .thumb-container a {
     height: 50px;
     width: 100%;
@@ -435,10 +439,13 @@ form {
   font-size: 1.6em;
   margin-right: aut; }
   .title + a {
-    color: #888; }
+    color: #888;
+    margin-left: 10px;
+    margin-top: 5px; }
 
 .post-wrapper {
-  position: relative; }
+  position: relative;
+  flex: 1; }
   .post-wrapper p {
     display: flex; }
   .post-wrapper .post-content {
@@ -485,5 +492,7 @@ form {
       background-position: 0 -370px; }
   .post-details .close {
     background-position: 0 -312px; }
+    .post-details .close:hover {
+      background-position: 0 -312px; }
 
 /*# sourceMappingURL=main.css.map */

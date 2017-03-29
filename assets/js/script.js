@@ -111,7 +111,7 @@
         newPost.querySelector('.order').textContent = order;
         newPost.querySelector('.title').textContent = title;
         newPost.querySelector('.title').href = post.data.url
-        newPost.querySelector('.domain').textContent = domain;
+        newPost.querySelector('.domain').textContent = "(" + domain + ")";
         newPost.querySelector('.author').textContent = author;
         newPost.querySelector('.sub').textContent = sub;
         newPost.querySelector('time').textContent = time;
@@ -124,12 +124,21 @@
           newPost.querySelector('.comment-num').textContent = "";
         }
 
-        if(score < 2){
+
+        switch(true){
+          case score < 2:
           newPost.querySelector('.score').textContent = "";
           newPost.querySelector('.score').classList.add('zero');
-        }else{
+          break;
+
+          case score >= 10000:
+          newPost.querySelector('.score').textContent = (score/1000).toFixed(1) + "k";
+          break;
+
+          default:
           newPost.querySelector('.score').textContent = score;
         }
+
 
         if(thumb != 'self'){
 
@@ -205,9 +214,10 @@ postsHolder.addEventListener('click', function(e){
   var target = e.target;
 
   if(target.classList.contains('expand')){
+    target.classList.toggle('close');
     target.parentNode.nextElementSibling.classList.toggle('is-collapsed');
   }
-  
+
 })
 
 
