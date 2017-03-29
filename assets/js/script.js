@@ -5,28 +5,37 @@
 //listen for the dom and when it's loaded excute fun (excuteCode)
   document.addEventListener('DOMContentLoaded', excuteCode);
 
+
+
   function excuteCode(){
 
     var postsHolder = document.querySelector('.posts-container');
     var nav = document.querySelector('.main-nav');
     var currentPostsContainer;
 
-
+//app object that'll contain all functions.
     var app = {
       url: 'hot',
       template: document.querySelector('#post-template').cloneNode(true),
     }
 
-//pull data from the reddit api then loops over
-//the returned data (posts) and pass to app.buildPost function.
-    app.fetch = function(url){
 
+//make a call to reddit api using snoocore
+    app.fetch = function(url){
+//display the loader
       app.isLoading(true);
 
+//select the posts container and remove all children nodes
       currentPostsContainer = document.querySelector('.posts');
       currentPostsContainer.innerHTML = "";
+
+//clone the posts container so when looping over the posts
+//this cloned node will append each post so instead of minpulating
+//the dom for each post we'll only minpulate it once.
       var postsClone = currentPostsContainer.cloneNode(true);
 
+//checks if the call is sent to unallowed end-point if so it
+//returns from the function and display an error image to the user.
       if(url == 'glided' || url == 'promoted' || url == 'wiki'){
         postsClone.innerHTML = "<img class='error' src='assets/img/reddit-broke.jpg'>"
         postsHolder.replaceChild(postsClone, currentPostsContainer);
@@ -34,18 +43,24 @@
         return;
       }
 
+//making the call to the api and loop over the returned data
+//for each turn in the loop we call the app.buildPosts function
+//and pass 3 arguments (currentpost - index - clonedNode).
         reddit('/' + url).get().then(function(data){
           var posts = data.data.children;
           for(var i = 0; i < posts.length; i++){
             app.buildPosts(posts[i], i, postsClone);
           }
+
+//replace the current posts container with the clonedNode that contains posts.
           postsHolder.replaceChild(postsClone, currentPostsContainer);
 
+//hide the loader.
           app.isLoading(false);
 
         });
-
     }
+
 
 
     app.buildPosts = function buildPosts(post, num, clone){
@@ -102,6 +117,40 @@
         newPost.querySelector('.sub').textContent = sub;
         newPost.querySelector('time').textContent = time;
         newPost.querySelector('.comment-num').textContent = comments_num;
+
+        if(thumb != 'self'){
+
+          switch(thumb){
+            case 'default':
+            newPost.querySelector('.thumb').classList.add('default')
+            break;
+
+            case 'image':
+            newPost.querySelector('.thumb').classList.add('image')
+            break;
+
+            default:
+              newPost.querySelector('.thumb').style.background = 'url(' + thumb + ')';
+          }
+
+          }
+
+
+        switch(expand){
+          case 'selftext':
+          newPost.querySelector('.post-content').textContent = post.data.selftext;
+          break;
+
+          case 'video':
+          newPost.querySelector('.post-content').textContent = post.data.media;
+          newPost.querySelector('.expand').classList.add('video');
+          break;
+
+          case null:
+          newPost.querySelector('.post-content').remove();
+          newPost.querySelector('.expand').remove();
+          break;
+        }
 
         clone.append(newPost);
 
