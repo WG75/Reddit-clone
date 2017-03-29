@@ -36,7 +36,11 @@
 
 //checks if the call is sent to unallowed end-point if so it
 //returns from the function and display an error image to the user.
-      if(url == 'glided' || url == 'promoted' || url == 'wiki'){
+      if(url == 'glided' ||
+        url == 'promoted'||
+        url == 'wiki'    ||
+        url == 'rising')
+      {
         postsClone.innerHTML = "<img class='error' src='assets/img/reddit-broke.jpg'>"
         postsHolder.replaceChild(postsClone, currentPostsContainer);
         app.isLoading(false);

@@ -365,7 +365,8 @@ form {
   display: flex;
   flex-direction: column;
   flex: 1;
-  justify-content: center; }
+  justify-content: center;
+  padding-top: 10px; }
   .posts-container .loading {
     align-self: center;
     width: 25px;
@@ -391,8 +392,7 @@ form {
     display: none; }
   .posts .post {
     display: flex;
-    margin-bottom: 5px;
-    padding: 5px; }
+    margin-bottom: 5px; }
     .posts .post .order {
       font-size: 1.7em;
       margin-top: 17px;
