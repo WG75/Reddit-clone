@@ -366,9 +366,20 @@ form {
   flex-direction: column;
   flex: 1;
   justify-content: center; }
-  .posts-container .spinner {
-    align-self: center; }
+  .posts-container .loading {
+    align-self: center;
+    width: 25px;
+    height: 25px;
+    border: 5px solid #ccc;
+    border-top-color: #777;
+    border-radius: 50%;
+    animation: spinner 1s linear infinite; }
 
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 .posts {
   margin-top: 15px;
   padding: 20px;

@@ -15,25 +15,32 @@
     var app = {
       url: 'hot',
       template: document.querySelector('#post-template').cloneNode(true),
-      posts_container: document.querySelector('.posts').cloneNode(true)
     }
 
 //pull data from the reddit api then loops over
 //the returned data (posts) and pass to app.buildPost function.
     app.fetch = function(url){
+      app.isLoading(true);
+
+      currentPostsContainer = document.querySelector('.posts');
+      currentPostsContainer.innerHTML = "";
+      var postsClone = currentPostsContainer.cloneNode(true);
+
       reddit('/' + url).get().then(function(data){
         var posts = data.data.children;
-        app.posts_container.innerHTML = "";
         for(var i = 0; i < posts.length; i++){
-          app.buildPosts(posts[i], i);
+          app.buildPosts(posts[i], i, postsClone);
         }
 
-        currentPostsContainer = document.querySelector('.posts');
-        postsHolder.replaceChild(app.posts_container, currentPostsContainer);
+        postsHolder.replaceChild(postsClone, currentPostsContainer);
+
+        app.isLoading(false);
+
       });
     }
 
-    app.buildPosts = function(post, num){
+
+    app.buildPosts = function buildPosts(post, num, clone){
       var order = num + 1;
       var score = post.data.score;
       var thumb = post.data.thumbnail;
@@ -88,20 +95,22 @@
         newPost.querySelector('time').textContent = time;
         newPost.querySelector('.comment-num').textContent = comments_num;
 
-        app.posts_container.append(newPost);
+        clone.append(newPost);
 
     }
 
 
+//checks whether the app is loading or not
+//if it's loading the spinner is dsiplayed
+//if it's finished loading spinner is hidden
+    app.isLoading = function isLoading(isLoading){
 
-
-    //
-    // app.isLoading = function spinner(isloading){
-    //
-    //   if(isloading){
-    //
-    //   }
-    // }
+      if(!isLoading){
+        document.querySelector('.loading').style.display = "none";
+      }else{
+        document.querySelector('.loading').style.display = "block";
+      }
+    }
 
 
 //attach events to the UI ELements
