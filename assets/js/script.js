@@ -20,23 +20,31 @@
 //pull data from the reddit api then loops over
 //the returned data (posts) and pass to app.buildPost function.
     app.fetch = function(url){
+
       app.isLoading(true);
 
       currentPostsContainer = document.querySelector('.posts');
       currentPostsContainer.innerHTML = "";
       var postsClone = currentPostsContainer.cloneNode(true);
 
-      reddit('/' + url).get().then(function(data){
-        var posts = data.data.children;
-        for(var i = 0; i < posts.length; i++){
-          app.buildPosts(posts[i], i, postsClone);
-        }
-
+      if(url == 'glided' || url == 'promoted' || url == 'wiki'){
+        postsClone.innerHTML = "<img class='error' src='assets/img/reddit-broke.jpg'>"
         postsHolder.replaceChild(postsClone, currentPostsContainer);
-
         app.isLoading(false);
+        return;
+      }
 
-      });
+        reddit('/' + url).get().then(function(data){
+          var posts = data.data.children;
+          for(var i = 0; i < posts.length; i++){
+            app.buildPosts(posts[i], i, postsClone);
+          }
+          postsHolder.replaceChild(postsClone, currentPostsContainer);
+
+          app.isLoading(false);
+
+        });
+
     }
 
 
