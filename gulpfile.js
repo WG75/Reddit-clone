@@ -6,11 +6,16 @@ var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
 var cssnano = require('gulp-cssnano');
 var imgmin = require('gulp-imagemin');
+plumber = require('gulp-plumber');
+
 
 
 gulp.task('sass', function(){
   gulp.src('app/assets/css/*.sass')
-  .pipe(sass())
+  .pipe(plumber())
+  .pipe(sass({
+    errLogToConsole: true
+  }))
   .pipe(gulp.dest('app/assets/css'))
   .pipe(browserSync.stream())
 })

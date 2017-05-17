@@ -6,11 +6,14 @@
   document.addEventListener('DOMContentLoaded', excuteCode);
 
 
-
   function excuteCode(){
 
     var postsHolder = document.querySelector('.posts-container');
     var nav = document.querySelector('.main-nav');
+    var dropdown = document.querySelector('.dropdown');
+    var dropdownMenu = document.querySelector('.dropdown-menu')
+    var menuIcon = document.querySelector('.menu-icon')
+    var navItems = document.querySelector('.nav-items')
     var currentPostsContainer;
 
 //app object that'll contain all functions.
@@ -212,7 +215,14 @@ nav.addEventListener('click', function(e){
   }
 })
 
+dropdown.addEventListener('click', function(e){
+  e.preventDefault()
+  dropdownMenu.classList.toggle('open')
+})
 
+menuIcon.addEventListener('click', function(){
+  navItems.classList.toggle('expand')
+})
 
 postsHolder.addEventListener('click', function(e){
   var target = e.target;

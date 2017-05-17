@@ -61,21 +61,34 @@ button {
       text-decoration: underline; }
 
 .dropdown {
+  position: relative;
   margin-left: 5px;
   margin-right: 10px;
-  padding-right: 20px;
+  padding-right: 30px;
   text-transform: uppercase;
   flex: 1 0 auto;
   background-image: url("../../assets/img/droparrowgray.gif");
   background-repeat: no-repeat;
   background-position: right; }
+  .dropdown .open {
+    display: block; }
   .dropdown a {
     display: block; }
     .dropdown a:hover {
       text-decoration: none; }
 
 .dropdown-menu {
-  display: none; }
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #f7f7f7;
+  border: 1px solid #000;
+  z-index: 1001; }
+  .dropdown-menu a:hover {
+    background: #cee3f8; }
+  .dropdown-menu a:last-child {
+    border-top: 1px dotted #000; }
 
 .sublinks {
   overflow: hidden; }
@@ -97,6 +110,7 @@ button {
     font-weight: 700; }
 
 .secondary-header {
+  position: relative;
   flex: 1;
   flex-flow: row wrap; }
   @media screen and (max-width: 800px) {
@@ -122,6 +136,52 @@ button {
       order: 2;
       align-self: center;
       margin-right: 0; } }
+  @media screen and (max-width: 480px) {
+    .main-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      overflow-y: hidden; }
+      .main-nav ul {
+        flex-direction: column;
+        width: 100%;
+        height: 0;
+        transition: all 0.3s;
+        text-align: center; }
+        .main-nav ul .tabbed {
+          border: 2px solid #000;
+          background: #cee3f8; }
+        .main-nav ul li {
+          margin-right: 0; }
+      .main-nav .expand {
+        height: 123px; } }
+
+.menu-icon {
+  position: relative;
+  cursor: pointer;
+  width: 23px;
+  height: 23px;
+  transform: rotate(-45deg);
+  margin: -5px 0 15px 7px;
+  display: none; }
+  @media screen and (max-width: 480px) {
+    .menu-icon {
+      display: block; } }
+  .menu-icon span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background: transparent;
+    border: 2px solid;
+    border-color: transparent transparent #000 #000; }
+  .menu-icon span:nth-child(1) {
+    transform: scale(1.5); }
+  .menu-icon:hover span:nth-child(2) {
+    top: -2px;
+    left: 2px; }
 
 .nav-item {
   margin-right: 5px;
@@ -176,7 +236,8 @@ button {
 aside {
   flex: 0 0 310px;
   margin-left: auto;
-  padding: 7px 5px; }
+  padding: 7px 5px;
+  display: none; }
 
 form {
   font-size: 0; }
