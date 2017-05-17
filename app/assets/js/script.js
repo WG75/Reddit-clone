@@ -14,6 +14,7 @@
     var dropdownMenu = document.querySelector('.dropdown-menu')
     var menuIcon = document.querySelector('.menu-icon')
     var navItems = document.querySelector('.nav-items')
+    var search = document.querySelector('.search')
     var currentPostsContainer;
 
 //app object that'll contain all functions.
@@ -222,6 +223,10 @@ dropdown.addEventListener('click', function(e){
 
 menuIcon.addEventListener('click', function(){
   navItems.classList.toggle('expand')
+})
+
+search.addEventListener('click', function(){
+  document.querySelector('aside').classList.toggle('sidebar-isOpen')
 })
 
 postsHolder.addEventListener('click', function(e){
