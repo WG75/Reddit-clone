@@ -255,9 +255,10 @@ aside {
   @media screen and (max-width: 1020px) {
     aside {
       position: absolute;
-      right: -100%;
+      right: -120%;
       top: 0;
       width: 330px;
+      max-width: 100%;
       z-index: 1002;
       background: #fff;
       transition: 0.3s; } }
