@@ -54,4 +54,4 @@ gulp.task('imgmin', function(){
 
 
 
-gulp.task('build', ['minify', 'imgmin']);
+gulp.task('build', ['sass', 'minify', 'imgmin'] );

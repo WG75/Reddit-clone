@@ -67,7 +67,7 @@ button {
   padding-right: 30px;
   text-transform: uppercase;
   flex: 1 0 auto;
-  background-image: url("../../assets/img/droparrowgray.gif");
+  background-image: url("/img/droparrowgray.gif");
   background-repeat: no-repeat;
   background-position: right; }
   .dropdown .open {
@@ -119,7 +119,7 @@ button {
       align-items: center; } }
   .secondary-header .logo {
     width: 120px;
-    background: url("../../assets/img/icons.png");
+    background: url("/img/icons.png");
     background-repeat: no-repeat;
     background-position: 0px -1320px;
     margin-right: 10px;
@@ -215,7 +215,7 @@ button {
     text-align: center;
     color: gray; }
   .user-actions .search {
-    background-image: url("../../assets/img/icons.png");
+    background-image: url("/img/icons.png");
     background-position: -89px -1637px;
     background-repeat: no-repeat;
     width: 15px;
@@ -238,7 +238,7 @@ button {
   width: 15px;
   height: 15px;
   vertical-align: middle;
-  background-image: url("../../assets/img/icons.png");
+  background-image: url("/img/icons.png");
   background-position: -42px -1659px; }
 
 /*** Styling the S*I*D*E*B*A*R ***/
@@ -289,7 +289,7 @@ form {
     width: 13px;
     vertical-align: middle;
     border: 0;
-    background-image: url("../../assets/img/icons.png");
+    background-image: url("/img/icons.png");
     background-color: transparent;
     background-position: -90px -1639px;
     background-repeat: no-repeat; }
@@ -302,7 +302,7 @@ form {
     position: relative;
     margin: 12px 0;
     padding: 6px;
-    background: url("../../assets/img/icons.png");
+    background: url("/img/icons.png");
     background-position: 0px -278px;
     background-repeat: repeat;
     border: 1px solid  #c4dbf1;
@@ -323,7 +323,7 @@ form {
       display: inline-block;
       width: 24px;
       height: calc(100% + 2px);
-      background: url("../../assets/img/icons.png");
+      background: url("/img/icons.png");
       background-position: -61px -1369px;
       background-repeat: no-repeat;
       background-color: #fff; }
@@ -341,7 +341,7 @@ form {
     margin-top: -6px;
     width: 45px;
     height: 45px;
-    background-image: url("../../assets/img/icons.png");
+    background-image: url("/img/icons.png");
     background-repeat: no-repeat;
     background-position: -76px -1043px; }
 
@@ -377,7 +377,7 @@ form {
     margin: 10px 0; }
   .reddit-gold .reddit-gold-logo {
     padding: 11px 41px;
-    background-image: url("../../assets/img/goldvertisement-logo.png");
+    background-image: url("/img/goldvertisement-logo.png");
     background-repeat: no-repeat;
     margin-bottom: -7px; }
   .reddit-gold p:nth-child(4) {
@@ -387,10 +387,10 @@ form {
     padding-left: 65px;
     background-position: 5px top; }
   .reddit-gold .buy-gold {
-    background-image: url("../../assets/img/goldvertisement-gold.png");
+    background-image: url("/img/goldvertisement-gold.png");
     background-repeat: no-repeat; }
   .reddit-gold .give-gold {
-    background-image: url("../../assets/img/goldvertisement-gild.png");
+    background-image: url("/img/goldvertisement-gild.png");
     background-repeat: no-repeat;
     background-position: left;
     background-position: 15px top;
@@ -507,7 +507,7 @@ form {
       flex: 0 0 30px;
       color: #c6c6c6; }
       .posts .post .vote button {
-        background: url("../../assets/img/icons.png");
+        background: url("/img/icons.png");
         padding: 10px; }
       .posts .post .vote .up {
         background-position: -81px -1616px; }
@@ -528,7 +528,7 @@ form {
   .thumb-container a {
     height: 50px;
     width: 100%;
-    background: url("../../assets/img/icons.png");
+    background: url("/img/icons.png");
     background-position: 1px -1267px; }
   .thumb-container .default {
     background-position: 1px -1099px; }
@@ -590,7 +590,7 @@ form {
     margin-right: 5px;
     width: 23px;
     height: 23px;
-    background: url("../../assets/img/sprite-expando.2qrMoUHZue8.png");
+    background: url("/img/sprite-expando.2qrMoUHZue8.png");
     background-repeat: no-repeat;
     background-position: 0 -457px; }
     .post-details .expand:hover {
