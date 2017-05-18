@@ -45,7 +45,7 @@
         url == 'wiki'    ||
         url == 'rising')
       {
-        postsClone.innerHTML = "<img class='error' src='assets/img/reddit-broke.jpg'>"
+        postsClone.innerHTML = "<img class='error' src='/img/reddit-broke.jpg'>"
         postsHolder.replaceChild(postsClone, currentPostsContainer);
         app.isLoading(false);
         return;

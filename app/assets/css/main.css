@@ -244,7 +244,8 @@ button {
 /*** Styling the S*I*D*E*B*A*R ***/
 main {
   position: relative;
-  overflow: hidden; }
+  overflow: hidden;
+  min-height: 100vh; }
   main .sidebar-isOpen {
     right: 0; }
 
