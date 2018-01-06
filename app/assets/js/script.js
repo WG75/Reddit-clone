@@ -45,7 +45,7 @@
         url == 'wiki'    ||
         url == 'rising')
       {
-        postsClone.innerHTML = "<img class='error' src='/img/reddit-broke.jpg'>"
+        postsClone.innerHTML = "<img class='error' src='/assets/img/reddit-broke.jpg'>"
         postsHolder.replaceChild(postsClone, currentPostsContainer);
         app.isLoading(false);
         return;
@@ -172,7 +172,8 @@
           break;
 
           case 'video':
-          newPost.querySelector('.post-content').innerHTML = "<img src=" + post.data.media.oembed.thumbnail_url + ">";
+          var img = post.data.media.oembed ? post.data.media.oembed.thumbnail_url : ''
+          newPost.querySelector('.post-content').innerHTML = "<img src=" +  img  + ">";
           newPost.querySelector('.post-content').style.border = "none";
           newPost.querySelector('.expand').classList.add('video');
           break;
